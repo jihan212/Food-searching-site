@@ -27,11 +27,16 @@ const foodMenus = foods =>{
 }
 const displayDetail = name => {
     //https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772
-    const url = `https://www.themealdb.com/api/json/v1/1/categories.php?i=${name}`
+    const url = `https://www.themealdb.com/api/json/v1/1/categories.php`
     fetch(url)
     .then(response => response.json())
-    .then(data => recipeDetails(data));
+    .then(data => recipeDetails(data.categories[0]));
 }
 const recipeDetails = recipe =>{
-    
+    const detailDiv = document.getElementById("food-details");
+    detailDiv.innerHTML=`
+    <img class="recipe-img" src="${recipe.strCategoryThumb}"></img>
+    <h1 class="food-name">${recipe.strCategory}</h1> 
+    <p>${recipe.strCategoryDescription}</p>   
+    `
 }
