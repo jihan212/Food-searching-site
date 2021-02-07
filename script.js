@@ -18,12 +18,20 @@ const foodMenus = foods =>{
     const foodInfo = `
                 <img class="food-img" src="${foodItems.strCategoryThumb}"></img>
                 <h1 class="food-name">${foodItems.strCategory}</h1>
-                <button id="recipeBTN" class="recipe-btn">Recipe</button>
+                <button onClick="displayDetail('${foodItems.strCategory}')" id="recipeBTN" class="recipe-btn">Recipe</button>
             `;
     foodItemDiv.innerHTML = foodInfo;
 
     foodItemsDiv.appendChild(foodItemDiv);
-
-    foodItemsDiv.appendChild(foodItemDiv);
     });
+}
+const displayDetail = name => {
+    //https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772
+    const url = `https://www.themealdb.com/api/json/v1/1/categories.php?i=${name}`
+    fetch(url)
+    .then(response => response.json())
+    .then(data => recipeDetails(data));
+}
+const recipeDetails = recipe =>{
+    
 }
