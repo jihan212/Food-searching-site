@@ -7,18 +7,20 @@ fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
 function foodMenus(foods) {
   const foodItemsDiv = document.getElementById("food-items");
   const foodItem = foods.categories;
-  for (let i = 0; i < foodItem.length; i++) {
-    const foodItems = foodItem[i];
+    foodItem.forEach(foodItems => {
     const foodItemDiv = document.createElement("div");
     foodItemDiv.className="food-item";
 
     const foodInfo = `
                 <img class="food-img" src="${foodItems.strCategoryThumb}"></img>
                 <h1 class="food-name">${foodItems.strCategory}</h1>
-                <p class="food-details">${foodItems.strCategoryDescription}</p>
+                <button class="recipe-btn">Recipe</button>
             `;
     foodItemDiv.innerHTML = foodInfo;
 
     foodItemsDiv.appendChild(foodItemDiv);
-  }
+
+    foodItemsDiv.appendChild(foodItemDiv);
+    });
 }
+//<p class="food-details">${foodItems.strCategoryDescription}</p>

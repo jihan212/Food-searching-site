@@ -31,9 +31,10 @@ body{
 }
 .food-item{
     border: 2px solid salmon;
+    background-color: salmon;
     border-radius: 10px;
     width: 350px;
-    height: 450px;
+    height: 210px;
     margin: 10px;
 }
 .food-img{
@@ -50,4 +51,12 @@ body{
 .food-details{
     text-align: center;
     padding: 0px 5px;
+}
+.recipe-btn{
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
