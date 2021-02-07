@@ -8,7 +8,7 @@ fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
     })
   });
 
-function foodMenus(foods) {
+const foodMenus = foods =>{
   const foodItemsDiv = document.getElementById("food-items");
   const foodItem = foods.categories;
     foodItem.forEach(foodItems => {
