@@ -25,3 +25,29 @@ body{
     border-radius: 5px;
     color: rgb(255, 255, 255);
 }
+#food-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.food-item{
+    border: 2px solid salmon;
+    border-radius: 10px;
+    width: 350px;
+    height: 450px;
+    margin: 10px;
+}
+.food-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    width: 50%;
+}
+.food-name{
+    font-size: 25px;
+    text-align: center;
+}
+.food-details{
+    text-align: center;
+    padding: 0px 5px;
+}

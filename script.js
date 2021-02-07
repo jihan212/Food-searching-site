@@ -10,11 +10,13 @@ function foodMenus(foods) {
   for (let i = 0; i < foodItem.length; i++) {
     const foodItems = foodItem[i];
     const foodItemDiv = document.createElement("div");
+    foodItemDiv.className="food-item";
 
     const foodInfo = `
-                <h1>${foodItems.strCategory}</h1>
-                <p>${foodItems.strCategoryDescription}</p>
-            `
+                <img class="food-img" src="${foodItems.strCategoryThumb}"></img>
+                <h1 class="food-name">${foodItems.strCategory}</h1>
+                <p class="food-details">${foodItems.strCategoryDescription}</p>
+            `;
     foodItemDiv.innerHTML = foodInfo;
 
     foodItemsDiv.appendChild(foodItemDiv);
