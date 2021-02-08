@@ -6,7 +6,7 @@ const searchFood = async() => {
   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchLetter}`
   // data loading
   try {
-    const res = await fetch (url)
+  const res = await fetch (url)
   const data = await res.json()
   displayFoods(data.meals);
   }
@@ -51,5 +51,6 @@ const getIngredients = ( ingredients1,ingredients2,ingredients3,ingredients4,ing
 
 const displayError = error => {
   const errorMessage = document.getElementById("errorMessage");
+  errorMessage.innerText = "";
   errorMessage.innerText = error;
 }
