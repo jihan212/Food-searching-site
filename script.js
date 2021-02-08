@@ -5,9 +5,14 @@ const searchFood = async() => {
   const searchLetter = document.getElementById("search-input").value;
   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchLetter}`
   // data loading
-  const res = await fetch (url)
+  try {
+    const res = await fetch (url)
   const data = await res.json()
   displayFoods(data.meals);
+  }
+  catch (error){
+    displayError("Sorry !! Your Meal is not here ");
+  }
 }
 const displayFoods = foods => {
   const foodItems = document.getElementById("food-items");
@@ -42,4 +47,9 @@ const getIngredients = ( ingredients1,ingredients2,ingredients3,ingredients4,ing
   `;
 
   itemIngredients.appendChild(ul);
+}
+
+const displayError = error => {
+  const errorMessage = document.getElementById("errorMessage");
+  errorMessage.innerText = error;
 }

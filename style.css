@@ -83,11 +83,12 @@ body{
     margin-top: 5px;
     text-align: center;
 }
-/*
-.recipe-img{
+#errorMessage{
+    width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5px;
-    width: 80%;
-}*/
+    text-align: center;
+    font-size: 50px;
+    color: red;
+}
