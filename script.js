@@ -27,15 +27,19 @@ const displayFoods = foods => {
 
 const getIngredients = ( ingredients1,ingredients2,ingredients3,ingredients4,ingredients5,ingredients6  ) =>{
   const itemIngredients = document.getElementById("food-details");
+  itemIngredients.innerHTML = "";
   itemIngredients.className = ("food-details");
+
   const ul = document.createElement('ul');
   ul.innerHTML = `
+  <h1>Item Ingredients</h1>
   <li>${ingredients1}</li>
   <li>${ingredients2}</li>
   <li>${ingredients3}</li>
   <li>${ingredients4}</li>
   <li>${ingredients5}</li>
   <li>${ingredients6}</li>
-  `
+  `;
+
   itemIngredients.appendChild(ul);
 }

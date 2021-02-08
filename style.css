@@ -63,20 +63,26 @@ body{
     background-color: blanchedalmond;
     color: brown;
 }
-/*
 .food-details{
     text-align: center;
     padding: 0px 5px;
 }
+.food-details ul li {
+    list-style:disc;
+    font-size: 15px;
+}
 #food-details{
-    border: 2px solid salmon;
     width: 30%;
+    height: auto;
+    padding-bottom: 20px;
+    height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 5px;
     text-align: center;
 }
+/*
 .recipe-img{
     display: block;
     margin-left: auto;
