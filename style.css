@@ -49,15 +49,10 @@ body{
     font-size: 15px;
     text-align: center;
 }
-/*
-.food-details{
-    text-align: center;
-    padding: 0px 5px;
-}
 .recipe-btn{
     width: 80px;
     height: 30px;
-    border: 2px solid black;
+    border: 2px solid salmon;
     border-radius: 5px;
     display: block;
     margin-left: auto;
@@ -65,8 +60,13 @@ body{
     background-color: tomato;
 }
 .recipe-btn:hover{
-    background-color: brown;
-    color: blanchedalmond;
+    background-color: blanchedalmond;
+    color: brown;
+}
+/*
+.food-details{
+    text-align: center;
+    padding: 0px 5px;
 }
 #food-details{
     border: 2px solid salmon;
